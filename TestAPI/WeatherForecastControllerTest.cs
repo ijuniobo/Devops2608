@@ -14,5 +14,24 @@ namespace TestAPI
             Assert.True(result.Any());
 
         }
+
+        [Fact]
+        public void DeveFazerPostSemSucesso()
+        {
+            var controller = new WeatherForecastController();
+            try
+            {
+                var result = controller.Post();
+
+            }
+            catch (Exception e)
+            {
+
+                Assert.True(e.Message.Any());
+            }
+
+
+        }
+
     }
 }
